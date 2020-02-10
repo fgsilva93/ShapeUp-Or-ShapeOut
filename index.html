@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container w-100">
+        <div class="row" id="row1">
+            <input class="wr" type="number" name="Width" id="RectW" placeholder="width">
+            <input class="hr" type="number" name="Height" id="RectH" placeholder="Height">
+            <button type="submit" class="btn btn-warning" id="rectangleBtn">Rectangle</button>
+        </div>
+        <div class="row" id="row2">
+            <input class="sl" type="number" name="SideLength" id="Side-Length" placeholder="SideLength">
+            <button type="submit" class="btn btn-success" id="squareBtn">Square</button>
+        </div>
+        <div class="row" id="row3">
+            <input class="ra" type="number" name="Radius" id="Radius" placeholder="Radius">
+            <button type="submit" class="btn btn-primary" id="circleBtn">Circle</button>
+        </div>
+        <div class="row" id="row4">
+            <input class="tri" type="number" name="Height" id="TriHeight" placeholder="Height">
+            <button type="submit" class="btn btn-danger" id="triangleBtn">Triangle</button>
+        </div>
+    </div>
+
+    <button id="btn2">Button</button>
+
+    <div class="canvas-container"></div>
+    <div class="info-container">
+        <span>
+            <label class="text-white" id="la">Shapes</label>
+        </span>
+        <div class="row">
+            <label class="mv text-white">Name</label>
+            <input type="text">
+        </div>
+        <div class="row">
+            <label class="mv text-white">Width</label>
+            <input type="number">
+        </div>
+        <div class="row">
+            <label class=" mv text-white">Height</label>
+            <input type="number">
+        </div>
+        <div class="row">
+            <label class="mv text-white">Radius</label>
+            <input type="number">
+        </div>
+        <div class="row">
+            <label class="mv text-white">Area</label>
+            <input type="number">
+        </div>
+        <div class="row">
+            <label class="mv text-white">Perimeter</label>
+            <input type="number">
+        </div>
+    </div>
+
+    <!-- <div class="info-container">
+        <ul>
+            <li>Shape Name:</li>
+            <li>Width:</li>
+            <li>Height:</li>
+            <li>Radius:</li>
+            <li>Area:</li>
+            <li>Perimeter:</li>
+        </ul>
+    </div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>

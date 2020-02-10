@@ -1,0 +1,67 @@
+.container {
+    margin-top: 5px;
+    border: 2px solid black;
+    height: 230px; 
+}
+
+.row {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    margin-left: 5px;
+}
+
+button {
+    margin-left: 5px;
+}
+
+#btn2 {
+    margin: 20px; 
+}
+
+.canvas-container {
+    height: 600px;
+    width: 600px;
+    border: 2px solid black;
+    background-color: cadetblue;
+    margin-left: 20px;
+}
+
+.info-container {
+    border: 2px solid black;
+    background-color: burlywood;
+        position: relative;
+        top: -600px;
+        left: 640px;
+        width: 400px;
+        height: 600px;
+}
+
+span {
+    margin-left: 150px; 
+}
+.mv {
+    width: 73px;
+}
+
+.wr {
+    width: 400px;
+}
+
+.hr {
+    width: 400px;
+}
+.sl {
+    width: 820px;
+}
+
+.ra {
+    width: 830px;
+}
+
+.tri {
+    width: 820px;
+}
