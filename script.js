@@ -20,24 +20,26 @@ class Shape {
 
 class Rectangle extends Shape {
     constructor(width, height) {
-
+        super(width,height);
     }
 }
 
 class Sqaure extends Shape {
     constructor(sideLength) {
-
+        super(wifth,height);
+        this.sideLength = sideLength;
     }
 }
 
 class Circle extends Shape {
     constructor(radius) {
-
+        super(width,height);
+        this.radius = radius;
     }
 }
 
 class Triangle extends Shape {
     constructor(height) {
-
+        super(width,height);
     }
 }
