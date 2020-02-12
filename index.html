@@ -11,19 +11,19 @@
 <body>
     <div class="container w-100">
         <div class="row" id="row1">
-            <input class="wr" type="number" name="Width" id="RectW" placeholder="width">
-            <input class="hr" type="number" name="Height" id="RectH" placeholder="Height">
+            <input class="wr" type="number" name="Width" id="RectW" min="0" max="600" placeholder="width">
+            <input class="hr" type="number" name="Height" id="RectH" min="0" max="600" placeholder="Height">
             <button type="submit" class="btn btn-warning" id="rectangleBtn">Rectangle</button>
         </div>
         <div class="row" id="row2">
             <input class="sl" type="number" name="SideLength" id="Side-Length" placeholder="SideLength">
             <button type="submit" class="btn btn-success" id="squareBtn">Square</button>
         </div>
-        <div class="row" id="row3">
-            <input class="ra" type="number" name="Radius" id="Radius" placeholder="Radius">
+        <div class="row"  id="row3">
+            <input type="number" min="0" max="600" name="Radius" id="circle-radius" placeholder="Radius">
             <button type="submit" class="btn btn-primary" id="circleBtn">Circle</button>
         </div>
-        <div class="row" id="row4">
+        <div class="row"  id="row4">
             <input class="tri" type="number" name="Height" id="TriHeight" placeholder="Height">
             <button type="submit" class="btn btn-danger" id="triangleBtn">Triangle</button>
         </div>
@@ -31,7 +31,8 @@
 
     <button id="btn2">Button</button>
 
-    <div class="canvas-container"></div>
+    <div class="canvas-container" id="canvas"></div>
+
     <div class="info-container">
         <span>
             <label class="text-white" id="la">Shapes</label>

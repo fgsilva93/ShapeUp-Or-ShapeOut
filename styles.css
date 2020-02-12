@@ -65,3 +65,9 @@ span {
 .tri {
     width: 820px;
 }
+
+.circle {
+    background: purple;
+    border-radius: 50%;
+    position: absolute;
+}
