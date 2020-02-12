@@ -3,22 +3,33 @@ const Max = 600;
 let rectangle =document.getElementsByClassName('rectangle');
 
 let rectangleButton = document.getElementById('rectangleBtn');
-let sqBtn = document.getElementById('sqaureBtn');
-let cirBtn = document.getElementById('circleBtn'); 
-let triBtn = document.getElementById('trianleBtn');
+let squareButton = document.getElementById('squareBtn');
+let circleButton = document.getElementById('circleBtn'); 
+let triangleButton = document.getElementById('triangleBtn');
 
-let rectangleHeight = document.getElementById('rectH');
-let rectangleWidth = document.getElementById('rectW');
-let squareSL = document.getElementById('SideLength');
+let rectangleHeight = document.getElementById('rectangleheight');
+let rectangleWidth = document.getElementById('rectanglewidth');
+let squareSideLength = document.getElementById('sidelength');
 let circleRad = document.getElementById('circle-radius');
-let TriangleHeight = document.getElementById('TriangleHeight'); 
+let triangleHeight = document.getElementById('triangleheight'); 
 
 let container = document.getElementById('canvas');
 
-cirBtn.addEventListener('click', function newCircle() {
-   new Circle(circleRad.value);
-    console.log('The button is working');
+rectangleButton.addEventListener('click', () => {
+    new Rectangle(rectangleHeight.value, rectangleWidth.value);
 });
+
+squareButton.addEventListener('click', () => {
+    new Square(squareSideLength.value); 
+});
+
+circleButton.addEventListener('click', () => {
+   new Circle(circleRad.value);
+});
+
+triangleButton.addEventListener('click', () => {
+    new Triangle(triangleHeight.value);
+})
 
 class Shape {
     constructor(height, width) {
@@ -27,14 +38,6 @@ class Shape {
     }
     
     draw() {
-        if(this.width > 600 && this.height > 600) {
-            return alert("Thats too large");
-        } else if (this.width > 600) {
-            return alert("No, no. You can't do that");
-        } else if(this.height > 600) {
-            return alert("Cant do that");
-        };
-
         let x = Math.floor(Math.random() * (Max - this.width));
         let y = Math.floor(Math.random() * (Max - this.height));
         this.div = document.createElement('div');
@@ -52,14 +55,19 @@ class Shape {
 }
 
 class Rectangle extends Shape {
-    constructor(x, y) {
+    constructor(height, width) {
         super(height,width);
+        this.cssClass = 'rectangle';
+        this.draw();
     }
 }
 
-class Sqaure extends Shape {
-    constructor(x, y, size) {
-        super(width,height);
+class Square extends Shape {
+    constructor(sideLength) {
+        super(sideLength, sideLength);
+        this.sideLength = sideLength;
+        this.cssClass = 'square';
+        this.draw();
     }
 }
 
@@ -74,6 +82,14 @@ class Circle extends Shape {
 
 class Triangle extends Shape {
     constructor(height) {
-        super(width,height);
+        super(height, height);
+        this.cssClass = 'triangle';
+        this.draw();
+        this.div.style.width = '0';
+        this.div.style.height = '0';
+        this.div.style.borderBottomWidth = `${height}px`;
+        this.div.style.borderRightWidth = `${height}px`;
+  
+
     }
 }

@@ -11,12 +11,12 @@
 <body>
     <div class="container w-100">
         <div class="row" id="row1">
-            <input class="wr" type="number" name="Width" id="RectW" min="0" max="600" placeholder="width">
-            <input class="hr" type="number" name="Height" id="RectH" min="0" max="600" placeholder="Height">
+            <input type="number"  name="Width" id="rectanglewidth" min="0" max="600" placeholder="width">
+            <input type="number"  name="Height" id="rectangleheight" min="0" max="600" placeholder="Height">
             <button type="submit" class="btn btn-warning" id="rectangleBtn">Rectangle</button>
         </div>
         <div class="row" id="row2">
-            <input class="sl" type="number" name="SideLength" id="Side-Length" placeholder="SideLength">
+            <input type="number" min="0" max="600" name="side-length" id="sidelength" placeholder="sidelength">
             <button type="submit" class="btn btn-success" id="squareBtn">Square</button>
         </div>
         <div class="row"  id="row3">
@@ -24,7 +24,7 @@
             <button type="submit" class="btn btn-primary" id="circleBtn">Circle</button>
         </div>
         <div class="row"  id="row4">
-            <input class="tri" type="number" name="Height" id="TriHeight" placeholder="Height">
+            <input  type="number" min="0" max="600" name="Height" id="triangleheight" placeholder="Height">
             <button type="submit" class="btn btn-danger" id="triangleBtn">Triangle</button>
         </div>
     </div>
@@ -62,17 +62,6 @@
             <input type="number">
         </div>
     </div>
-
-    <!-- <div class="info-container">
-        <ul>
-            <li>Shape Name:</li>
-            <li>Width:</li>
-            <li>Height:</li>
-            <li>Radius:</li>
-            <li>Area:</li>
-            <li>Perimeter:</li>
-        </ul>
-    </div> -->
 
     <script src="script.js"></script>
 </body>
